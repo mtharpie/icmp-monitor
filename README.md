@@ -13,13 +13,13 @@ Copy files over to /mnt/flash on your Arista EOS device
 Configure the following event-handlers for each script. The first is to run on boot, the second exposes a new show command to the cli.
 
 Event-Handler for Monitor Script
-![alt text](https://github.com/mtharpie/vagrant_leaf_spine/blob/master/event-monitor-script.png)
+![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/event-monitor-script.png)
 
 Help Menu
-![alt text](https://github.com/mtharpie/vagrant_leaf_spine/blob/master/help-menu.png)
+![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/help-menu.png)
 
 Event-Handler for cli show commands
-![alt text](https://github.com/mtharpie/vagrant_leaf_spine/blob/master/event-monitor-show.png)
+![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/event-monitor-show.png)
 
    
 #Kick off Manually
