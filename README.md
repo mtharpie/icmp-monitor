@@ -6,27 +6,27 @@ Create a ICMP monitor and take action on your device given the status of the mon
 
 Copy files over to /mnt/flash on your Arista EOS device
  - monitor-ip.py
- - icmp-monitor.py
+ - show-icmp-monitor.py
 
 #Step 2
 
 Configure the following event-handlers for each script. The first is to run on boot, the second exposes a new show command to the cli.
 
 Event-Handler for Monitor Script
-![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/event-monitor-script.png)
+![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/event-handler-script.png)
 
 Help Menu
 ![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/help-menu.png)
 
 Event-Handler for cli show commands
-![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/event-monitor-show.png)
+![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/event-handler-show.png)
 
    
 #Kick off Manually
 
 If device is already online follow these steps to kick off manually.
 
-1. copy all files to /mnt/flash/
+1. copy .py files to /mnt/flash/
 2. ensure root password is configured
  - aaa root secret <secret>
 3. from cli prompt, type in keyword bash
