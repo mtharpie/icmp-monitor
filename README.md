@@ -21,6 +21,8 @@ Help Menu
 Event-Handler for cli show commands
 ![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/event-handler-show.png)
 
+Example of show command
+![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/show-icmp-monitor.png)
    
 #Kick off Manually
 
