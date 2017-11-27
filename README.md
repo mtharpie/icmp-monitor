@@ -30,7 +30,7 @@ If device is already online follow these steps to kick off manually.
 
 1. copy .py files to /mnt/flash/
 2. ensure root password is configured
- - aaa root secret <secret>
+ - aaa root secret "INSERTYOURPASSWORD"
 3. from cli prompt, type in keyword bash
 4. su to root user, use root password
 5. copy files
