@@ -12,16 +12,19 @@ Copy the following files to `/mnt/flash` on your Arista EOS device:
 
 Configure the following event-handlers for each script. The first is to run on boot, the second exposes a new `show` command to the CLI.
 
-Event-Handler for Monitor Script
+### Event-Handler for Monitor Script
+
 ![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/event-handler-script.png)
 
-Help Menu
+### Help Menu
+
 ![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/help-menu.png)
 
-Event-Handler for cli `show` commands
+### Event-Handler for cli `show` commands
 ![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/event-handler-show.png)
 
-Example of show command
+### Example of show command
+
 ![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/show-icmp-monitor.png)
 
 # Kick off Manually
