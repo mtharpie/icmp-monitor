@@ -12,15 +12,12 @@ Copy files over to /mnt/flash on your Arista EOS device
 
 Configure the following event-handlers for each script. The first is to run on boot, the second exposes a new show command to the cli.
 
-event-handler monitor-ip-address
-trigger on-boot
-action bash /mnt/flash/monitor-ip.py -r 0.0.0.0/0 -n 10.1.1.2 -m 10.1.1.2 -s et1
-delay 300
 
-event-handler icmp-monitor-show
-trigger on-bootaction 
-bash cp /mnt/flash/icmp-monitor.py /usr/lib/python2.7/site-packages/CliPlugin/icmp-monitor.py
-delay 300
+![alt text](https://github.com/mtharpie/vagrant_leaf_spine/blob/master/vagrant-diagram.png)
+
+
+![alt text](https://github.com/mtharpie/vagrant_leaf_spine/blob/master/vagrant-diagram.png)
+
    
 #Kick off Manually
 
