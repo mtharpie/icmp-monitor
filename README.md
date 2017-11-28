@@ -34,7 +34,7 @@ If device is already online follow these steps to kick off manually.
 3. from cli prompt, type in keyword bash
 4. su to root user, use root password
 5. copy files
- - cp /mnt/flash/icmp-monitor.py /usr/lib/python2.7/site-packages/CliPlugin/icmp-monitor.py
+ - cp /mnt/flash/show-icmp-monitor.py /usr/lib/python2.7/site-packages/CliPlugin/show-icmp-monitor.py
 6. kick off monitor script manually and set to run in background
  - /mnt/flash/monitor-ip.py -r 0.0.0.0/0 -n 10.1.1.2 -m 10.1.1.2 -s et1 &
 7. logout
