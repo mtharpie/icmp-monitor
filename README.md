@@ -7,6 +7,7 @@ Create a ICMP monitor and take action on your device given the status of the mon
 Copy files over to /mnt/flash on your Arista EOS device
  - monitor-ip.py
  - show-icmp-monitor.py
+ - icmp-monitor-tasks.sh
 
 #Step 2
 
@@ -28,13 +29,12 @@ Example of show command
 
 If device is already online follow these steps to kick off manually.
 
-1. copy .py files to /mnt/flash/
+1. copy .sh & .py files to /mnt/flash/
 2. ensure root password is configured
  - aaa root secret "INSERTYOURPASSWORD"
 3. from cli prompt, type in keyword bash
 4. su to root user, use root password
-5. copy files
- - cp /mnt/flash/show-icmp-monitor.py /usr/lib/python2.7/site-packages/CliPlugin/show-icmp-monitor.py
+5. run /mnt/flash/icmp-monitor-tasks.sh
 6. kick off monitor script manually and set to run in background
  - /mnt/flash/monitor-ip.py -r 0.0.0.0/0 -n 10.1.1.2 -m 10.1.1.2 -s et1 &
 7. logout
