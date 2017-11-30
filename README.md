@@ -20,7 +20,7 @@ Help Menu
 ![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/help-menu.png)
 
 Event-Handler for cli show commands
-![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/event-handler-show.png)
+![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/event-handler-show-2.png)
 
 Example of show command
 ![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/show-icmp-monitor.png)
