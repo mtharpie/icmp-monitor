@@ -51,6 +51,25 @@ def sendCmds(commands):
     return (stdout, stderr)
 
 
+def is_interface_connected():
+    ''' function to take action '''
+    global source_int, pid
+
+    show_cmds = ['FastCli', '-p15', '-c', 'show interface %s status' % source_int]
+
+    stdout, stderr = sendCmds(failover_cmds)
+    if 'Invalid input' in stdout:
+        syslog.syslog('%%MONITOR_IP-3-ERROR: pid: %s Error grabbing interface status: interface %s ' % (pid, source_int) )
+        sys.exit(1)
+    else:
+        status = json.loads(stdout)
+        int_name = status['interfaceStatuses'].keys()[0]
+        if status['interfaceStatuses'][int_name]['linkStatus'] == 'connected':
+            return True
+        else:
+            return False
+
+
 def action(failed=True):
     ''' function to take action '''
     global tracked_route, next_hop, route_type, pid
@@ -103,7 +122,19 @@ def monitor():
     global pings_per_cycle, ping_wait, source_int, monitor_ip, loss_threshold
     global fail_counter, success_counter, failed, fail_threshold
 
+    #print 'Interface connected = %s' % str(is_interface_connected())
+
+    #if not is_interface_connected():
+    #    if failed:
+    #        return
+    #    else:
+    #        failed = True
+    #        syslog.syslog('%%MONITOR_IP-3-ERROR: pid: %s interface %s connected check failed, starting failover task' % (pid, source_int) )
+    #        action(failed)
+    #        return
+
     ping_cmds = ['ping', '-c', str(pings_per_cycle), '-i', str(ping_wait), '-I', source_int, monitor_ip]
+
     stdout, stderr = sendCmds(ping_cmds)
     if stderr:
         syslog.syslog('%%MONITOR_IP-3-ERROR: pid: %s stderr %s: during ping' % (pid, stderr) )
@@ -136,7 +167,7 @@ def monitor():
 
         write_state()
 
-        if success_counter > 100000:
+        if success_counter > 1000000:
             old_counter = success_counter
             success_counter = 0
             syslog.syslog('%%MONITOR_IP-5-INFO: pid: %s resetting counter was %s now %s' % (pid, old_counter, success_counter) )
