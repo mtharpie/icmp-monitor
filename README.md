@@ -34,10 +34,14 @@ If device is already online follow these steps to kick off manually.
  - aaa root secret "INSERTYOURPASSWORD"
 3. from cli prompt, type in keyword bash
 4. su to root user, use root password
-5. run /mnt/flash/icmp-monitor-tasks.sh
-6. kick off monitor script manually and set to run in background
+5. kick off monitor script manually and set to run in background
  - /mnt/flash/monitor-ip.py -r 0.0.0.0/0 -n 10.1.1.2 -m 10.1.1.2 -s et1 &
-7. logout
-8. log back in and verify with show command: show icmp monitor and bash ps -ef | grep monitor-ip
-
+6. Wait for 10 seconds and issue the command to ensure script is running
+ - ps -ef | grep monitor-ip
+7. run the following command to expose the show command via the cli
+ - /mnt/flash/icmp-monitor-tasks.sh
+8. logout and end ssh session
+9. ssh back in and verify with following show commands:
+ - show icmp monitor
+ - bash ps -ef | grep monitor-ip
 
