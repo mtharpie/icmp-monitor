@@ -14,7 +14,7 @@ Copy files over to /mnt/flash on your Arista EOS device
 Configure the following event-handlers for each script. The first is to run on boot, the second exposes a new show command to the cli.
 
 Event-Handler for Monitor Script
-![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/event-handler-script.png)
+![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/event-handler-script-2.png)
 
 Help Menu
 ![alt text](https://github.com/mtharpie/icmp-monitor/blob/master/pics/help-menu.png)
